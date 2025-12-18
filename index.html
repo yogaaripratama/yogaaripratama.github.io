@@ -1,260 +1,1111 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Yoga Ari Pratama | Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATU Photo UIN SATU - Jasa Foto & Cetak Foto Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2a6ecc;
+            --primary-dark: #1a5cb0;
+            --secondary: #ff6b35;
+            --accent: #00b894;
+            --light: #f8f9fa;
+            --dark: #1e2a3a;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 10px;
+            --box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
 
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* ROOT */
-    :root {
-      --primary: #2563eb;
-      --primary-dark: #1e40af;
-      --text-dark: #0f172a;
-      --text-soft: #475569;
-      --bg-soft: #f1f5f9;
-      --radius: 14px;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
 
-    body {
-      font-family: 'Segoe UI', Inter, system-ui, sans-serif;
-      color: var(--text-dark);
-      line-height: 1.7;
-      background: #ffffff;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-    }
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: #ffffff;
-      padding: 80px 0;
-    }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      align-items: center;
-      gap: 40px;
-    }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
 
-    .hero h1 {
-      font-size: 42px;
-      font-weight: 800;
-    }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
 
-    .hero h2 {
-      font-size: 18px;
-      font-weight: 500;
-      margin: 12px 0;
-      opacity: 0.9;
-    }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .hero p {
-      font-size: 16px;
-      margin-bottom: 25px;
-      opacity: 0.95;
-    }
+        .logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
 
-    .btn-primary {
-      display: inline-block;
-      padding: 12px 28px;
-      background: #ffffff;
-      color: var(--primary-dark);
-      border-radius: var(--radius);
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+        .logo-sub {
+            font-size: 13px;
+            color: var(--gray);
+            font-weight: 500;
+        }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
 
-    /* AVATAR */
-    .hero-avatar {
-      display: flex;
-      justify-content: center;
-    }
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
 
-    .avatar-circle {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      font-weight: 800;
-      border: 4px solid rgba(255,255,255,0.4);
-    }
+        nav a:hover {
+            color: var(--primary);
+        }
 
-    /* SECTION */
-    .section {
-      padding: 70px 0;
-    }
+        nav a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
 
-    .bg-soft {
-      background: var(--bg-soft);
-    }
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
 
-    .section-title {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-    .section-text {
-      max-width: 800px;
-      color: var(--text-soft);
-    }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+        }
 
-    /* SKILLS */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(42, 110, 204, 0.2);
+        }
 
-    .skill-card {
-      background: #ffffff;
-      padding: 18px;
-      border-radius: var(--radius);
-      font-weight: 600;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
 
-    .skill-card:hover {
-      transform: translateY(-4px);
-    }
+        .btn-secondary:hover {
+            background-color: #e05a2b;
+        }
 
-    /* FOCUS */
-    .focus-list {
-      list-style: none;
-      margin-top: 20px;
-    }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+            cursor: pointer;
+        }
 
-    .focus-list li {
-      padding: 12px 0 12px 30px;
-      position: relative;
-      color: var(--text-soft);
-    }
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 60px;
+        }
 
-    .focus-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: bold;
-    }
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
 
-    /* FOOTER */
-    footer {
-      background: #0f172a;
-      color: #cbd5f5;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 14px;
-    }
+        .hero-content {
+            flex: 1;
+        }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
 
-      .hero-avatar {
-        margin-top: 30px;
-      }
-    }
-  </style>
+        .hero-content h1 span {
+            color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        /* Services */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 50px;
+            font-size: 17px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services {
+            padding: 60px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            padding: 30px;
+            text-align: center;
+            border-top: 5px solid var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(42, 110, 204, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 28px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .service-price {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-price span {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        /* Order Process */
+        .order-process {
+            padding: 60px 0;
+            background-color: #f9fbfe;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background-color: var(--light-gray);
+            z-index: 1;
+        }
+
+        .step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 20%;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border: 3px solid var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--gray);
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+
+        .step.active .step-number {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .step h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Packages */
+        .packages {
+            padding: 60px 0;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .package-header {
+            padding: 30px 30px 20px;
+            text-align: center;
+            background-color: #f8fafd;
+        }
+
+        .package-header h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .package-price {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .package-price span {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .package-duration {
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+        .package-features {
+            padding: 30px;
+        }
+
+        .package-features ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .package-features li i {
+            color: var(--accent);
+            font-size: 18px;
+        }
+
+        .package-features li.disabled {
+            color: #adb5bd;
+        }
+
+        .package-features li.disabled i {
+            color: #adb5bd;
+        }
+
+        .package-footer {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+
+        /* Order Form */
+        .order-form-section {
+            padding: 60px 0;
+            background-color: #f9fbfe;
+        }
+
+        .order-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+        }
+
+        .form-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-size: 15px;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(42, 110, 204, 0.1);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-size: 15px;
+            background-color: white;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(42, 110, 204, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .form-check input {
+            margin-top: 5px;
+        }
+
+        .form-check label {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .form-check a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .form-check a:hover {
+            text-decoration: underline;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            padding: 60px 0;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .contact-info {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            font-size: 20px;
+            margin-top: 3px;
+        }
+
+        .contact-info span {
+            color: #b0b7c3;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2d3748;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d3748;
+            color: #b0b7c3;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .process-steps {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .step {
+                width: 45%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .header-actions .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+
+            .logo-main {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 50px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 26px;
+            }
+
+            .services-grid,
+            .packages-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                width: 100%;
+            }
+
+            .order-form-container {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">SP</div>
+                <div class="logo-text">
+                    <div class="logo-main">SATU Photo UIN SATU</div>
+                    <div class="logo-sub">Jasa Foto & Cetak Profesional</div>
+                </div>
+            </a>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <h1>Yoga Ari Pratama</h1>
-        <h2>Web Developer & Peneliti Ekonomi Syariah</h2>
-        <p>
-          Mengembangkan sistem digital yang efisien, terintegrasi,
-          dan selaras dengan prinsip ekonomi syariah.
-        </p>
-        <a href="#tentang" class="btn-primary">Tentang Saya</a>
-      </div>
-      <div class="hero-avatar">
-        <div class="avatar-circle">YA</div>
-      </div>
-    </div>
-  </section>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
 
-  <!-- TENTANG -->
-  <section id="tentang" class="section">
-    <div class="container">
-      <h3 class="section-title">Tentang Saya</h3>
-      <p class="section-text">
-        Saya adalah mahasiswa Magister Ekonomi Syariah Pascasarjana
-        UIN Sayyid Ali Rahmatullah Tulungagung dengan fokus pada
-        digitalisasi keuangan syariah, sistem informasi berbasis web,
-        dan integrasi teknologi pembayaran digital.
-      </p>
-    </div>
-  </section>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#packages">Paket</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
 
-  <!-- KEAHLIAN -->
-  <section class="section bg-soft">
-    <div class="container">
-      <h3 class="section-title">Keahlian Utama</h3>
-      <div class="skills-grid">
-        <div class="skill-card">PHP & MySQL</div>
-        <div class="skill-card">CodeIgniter</div>
-        <div class="skill-card">Google Apps Script</div>
-        <div class="skill-card">WhatsApp Bot</div>
-        <div class="skill-card">Dashboard & Reporting</div>
-        <div class="skill-card">Ekonomi Syariah Digital</div>
-      </div>
-    </div>
-  </section>
+            <div class="header-actions">
+                <a href="#order" class="btn btn-secondary">Pesan Sekarang</a>
+            </div>
+        </div>
+    </header>
 
-  <!-- FOKUS -->
-  <section class="section">
-    <div class="container">
-      <h3 class="section-title">Fokus & Minat</h3>
-      <ul class="focus-list">
-        <li>Digitalisasi Zakat dan Keuangan Islam</li>
-        <li>Sistem POS dan Manajemen Transaksi</li>
-        <li>Integrasi API dan Otomasi Data</li>
-        <li>Riset Ekonomi Syariah Berbasis Teknologi</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Abadikan Momen <span>Terindah Anda</span> Bersama Kami</h1>
+                <p>SATU Photo UIN SATU menyediakan jasa foto dan cetak foto profesional dengan kualitas terbaik. Dari foto dokumentasi acara kampus, foto produk, hingga cetak foto berkualitas tinggi dengan berbagai ukuran.</p>
+                <p><span class="highlight">Spesialis foto akademik dan kegiatan kampus UIN SATU</span></p>
+                <div class="hero-buttons">
+                    <a href="#order" class="btn">Pesan Jasa Foto</a>
+                    <a href="#packages" class="btn" style="background-color: transparent; color: var(--primary); border: 2px solid var(--primary); margin-left: 15px;">Lihat Paket</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Fotografer Profesional">
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Yoga Ari Pratama • Personal Website</p>
-    </div>
-  </footer>
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami</h2>
+            <p class="section-subtitle">Kami menyediakan berbagai layanan fotografi dan pencetakan untuk kebutuhan pribadi, akademik, maupun komersial</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Foto Dokumentasi Acara</h3>
+                    <p>Dokumentasi lengkap acara kampus, seminar, wisuda, atau kegiatan organisasi dengan kualitas profesional.</p>
+                    <div class="service-price">Mulai Rp 500.000<span> / acara</span></div>
+                    <a href="#order" class="btn">Pesan Sekarang</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Foto Akademik & Portofolio</h3>
+                    <p>Foto untuk keperluan akademik, portofolio mahasiswa, foto dosen, atau dokumentasi penelitian.</p>
+                    <div class="service-price">Mulai Rp 150.000<span> / sesi</span></div>
+                    <a href="#order" class="btn">Pesan Sekarang</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>Cetak Foto Berkualitas</h3>
+                    <p>Cetak foto dengan berbagai ukuran dan media (glossy, matte, canvas) menggunakan printer profesional.</p>
+                    <div class="service-price">Mulai Rp 5.000<span> / lembar</span></div>
+                    <a href="#order" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+    <!-- Order Process -->
+    <section class="order-process">
+        <div class="container">
+            <h2 class="section-title">Cara Memesan</h2>
+            <p class="section-subtitle">Hanya dengan 4 langkah mudah, Anda bisa mendapatkan jasa foto dan cetak foto berkualitas</p>
+            
+            <div class="process-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <h4>Pilih Layanan</h4>
+                    <p>Pilih jenis layanan foto atau cetak foto yang Anda butuhkan</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Isi Form Pemesanan</h4>
+                    <p>Isi form dengan detail kebutuhan dan informasi kontak Anda</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Konfirmasi & Pembayaran</h4>
+                    <p>Konfirmasi pesanan dan lakukan pembayaran sesuai kesepakatan</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Eksekusi & Pengiriman</h4>
+                    <p>Kami eksekusi pesanan dan kirim hasilnya ke lokasi Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2 class="section-title">Paket Layanan Foto</h2>
+            <p class="section-subtitle">Pilih paket yang sesuai dengan kebutuhan dan budget Anda. Semua paket sudah termasuk editing dasar.</p>
+            
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Paket Basic</h3>
+                        <div class="package-price">Rp 500.000<span> / acara</span></div>
+                        <div class="package-duration">Max 3 jam</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1 Fotografer</li>
+                            <li><i class="fas fa-check"></i> 100 foto hasil edit</li>
+                            <li><i class="fas fa-check"></i> Delivery digital (Google Drive)</li>
+                            <li><i class="fas fa-check"></i> Editing dasar (color grading)</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Cetak foto fisik</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Album digital</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#order" class="btn">Pilih Paket</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-badge">POPULER</div>
+                    <div class="package-header">
+                        <h3>Paket Standard</h3>
+                        <div class="package-price">Rp 850.000<span> / acara</span></div>
+                        <div class="package-duration">Max 5 jam</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1 Fotografer utama + 1 asisten</li>
+                            <li><i class="fas fa-check"></i> 250 foto hasil edit</li>
+                            <li><i class="fas fa-check"></i> Delivery digital + flashdisk</li>
+                            <li><i class="fas fa-check"></i> Editing lengkap (color grading + retouch)</li>
+                            <li><i class="fas fa-check"></i> 10 lembar cetak foto 10R</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Album digital</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#order" class="btn btn-secondary">Pilih Paket</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Paket Premium</h3>
+                        <div class="package-price">Rp 1.500.000<span> / acara</span></div>
+                        <div class="package-duration">Full day (8 jam)</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 2 Fotografer profesional</li>
+                            <li><i class="fas fa-check"></i> 500+ foto hasil edit</li>
+                            <li><i class="fas fa-check"></i> Delivery digital + flashdisk eksklusif</li>
+                            <li><i class="fas fa-check"></i> Editing premium (advanced retouch)</li>
+                            <li><i class="fas fa-check"></i> 30 lembar cetak foto 10R</li>
+                            <li><i class="fas fa-check"></i> Album digital dengan desain custom</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#order" class="btn">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-form-section" id="order">
+        <div class="container">
+            <div class="order-form-container">
+                <h2 class="form-title">Form Pemesanan Jasa Foto & Cetak</h2>
+                
+                <form id="orderForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nama Lengkap*</label>
+                            <input type="text" id="name" class="form-control" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" id="email" class="form-control" placeholder="nama@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Nomor WhatsApp*</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="0812-3456-7890" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="affiliation" class="form-label">Afiliasi (Fakultas/Organisasi)</label>
+                            <input type="text" id="affiliation" class="form-control" placeholder="Contoh: Fakultas Sains & Teknologi">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceType" class="form-label">Jenis Layanan*</label>
+                        <select id="serviceType" class="form-select" required>
+                            <option value="">Pilih jenis layanan</option>
+                            <option value="event">Foto Dokumentasi Acara</option>
+                            <option value="academic">Foto Akademik & Portofolio</option>
+                            <option value="printing">Cetak Foto</option>
+                            <option value="package-basic">Paket Basic (Rp 500.000)</option>
+                            <option value="package-standard">Paket Standard (Rp 850.000)</option>
+                            <option value="package-premium">Paket Premium (Rp 1.500.000)</option>
+                            <option value="custom">Layanan Kustom</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventDate" class="form-label">Tanggal Acara/Foto*</label>
+                            <input type="date" id="eventDate" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="form-label">Lokasi*</label>
+                            <input type="text" id="location" class="form-control" placeholder="Lokasi pemotretan" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="details" class="form-label">Detail Kebutuhan*</label>
+                        <textarea id="details" class="form-control form-textarea" placeholder="Jelaskan secara detail kebutuhan Anda: jenis acara, jumlah orang, kebutuhan khusus, dll." required></textarea>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">Saya setuju dengan <a href="#">syarat dan ketentuan</a> yang berlaku di SATU Photo UIN SATU</label>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; padding: 16px; font-size: 16px;">Kirim Pesanan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portofolio Kami</h2>
+            <p class="section-subtitle">Beberapa hasil dokumentasi acara dan foto yang telah kami kerjakan untuk klien UIN SATU</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Seminar Kampus">
+                    <div class="portfolio-overlay">
+                        <h4>Seminar Nasional</h4>
+                        <p>Fakultas Teknologi Informasi</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Wisuda">
+                    <div class="portfolio-overlay">
+                        <h
